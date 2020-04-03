@@ -1,17 +1,114 @@
-<html lang="en">
+<!-- <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background-color: paleturquoise;
+      }
+
+      #webchat {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <iframe
-      src="https://webchat.botframework.com/embed/MspCovid19Bot?s=tvfQBwENZ8E.MMxwZicuPA3jGHZaBRfVEo9vAsXVKirgF-hSoUrtUtc"
-      style="min-width: 400px; width: 100%; min-height: 500px;"
-    ></iframe>
+    <div id="webchat" role="main">
+      <iframe
+        src="https://webchat.botframework.com/embed/MspCovid19Bot1?s=rCktmlWS5W4.kxRQ9tvwCKmqVRem26aSQ32UOGLfAngqUh3AH3Bfg2c"
+        style="width: 50%; height: 100%;"
+      ></iframe>
+    </div>
+    <script>
+      (async function () {
+        window.WebChat.renderWebChat(
+          {
+            directLine: window.WebChat.createDirectLine({ token }),
+            styleOptions: {
+              rootHeight: "100%",
+              rootWidth: "50%",
+              bubbleBackground: "rgba(0, 0, 255, .1)",
+              bubbleFromUserBackground: "rgba(0, 255, 0, .1)",
+            },
+          },
+          document.getElementById("webchat")
+        );
+      })();
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="webchat" role="main"></div>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <script>
+      // const styleOptions = {
+      //   bubbleBackground: "rgba(0, 0, 255, .1)",
+      //   bubbleFromUserBackground: "rgba(0, 255, 0, .1)",
+      //   botAvatarInitials: "BF",
+      //   userAvatarInitials: "WC",
+      // };
+      const styleSet = window.WebChat.createStyleSet({
+        bubbleBackground: "rgb(237, 237, 237)",
+        bubbleTextColor: "Black",
+        bubbleFromUserBackground: "rgb(10, 141, 255)",
+        bubbleFromUserTextColor: "White",
+        botAvatarInitials: "MSP",
+        botAvatarBackgroundColor: "rgb(207, 216, 220)",
+        backgroundColor: "Cream",
+        rootHeight: "100%",
+        rootWidth: "100%",
+        // connectivityIconPadding: PADDING_REGULAR * 1.2,
+        // connectivityMarginLeftRight: PADDING_REGULAR * 1.4,
+        // connectivityMarginTopBottom: PADDING_REGULAR * 0.8,
+        connectivityTextSize: "75%",
+        failedConnectivity: "#C50F1F",
+        slowConnectivity: "#EAA300",
+        notificationText: "#5E5E5E",
+
+        typingAnimationBackgroundImage: null,
+        typingAnimationDuration: 5000,
+        typingAnimationHeight: 20,
+        typingAnimationWidth: 64,
+
+        spinnerAnimationBackgroundImage: null,
+        spinnerAnimationHeight: 16,
+        spinnerAnimationWidth: 16,
+        spinnerAnimationPaddingRight: 12,
+
+        enableUploadThumbnail: true,
+        uploadThumbnailContentType: "image/jpeg",
+        uploadThumbnailHeight: 360,
+        uploadThumbnailQuality: 0.6,
+        uploadThumbnailWidth: 720,
+      });
+
+      styleSet.textContent = {
+        ...styleSet.textContent,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+        fontWeight: "bold",
+        fontColor: "White",
+      };
+
+      window.WebChat.renderWebChat(
+        {
+          directLine: window.WebChat.createDirectLine({
+            secret: "rCktmlWS5W4.kxRQ9tvwCKmqVRem26aSQ32UOGLfAngqUh3AH3Bfg2c",
+          }),
+
+          // Passing 'styleOptions' when rendering Web Chat
+          // styleOptions,
+          styleSet,
+        },
+        document.getElementById("webchat")
+      );
+    </script>
   </body>
 </html>
-
-<!-- https://webchat.botframework.com/embed/msp-qna-service-olumide-bot?s=KbZzKxKKjJM.mjX7ickVqyuvBoq7Oe6nuWed__yqTzfZZgJxaJekvw4
-https://webchat.botframework.com/embed/MtcCovid19Bot?s=T5Rnb0hcJdE.HFFqZYsPmvd2p3ms1pz9hW1CGCbTK7DCTcVSlHYBT6c -->
