@@ -1,18 +1,31 @@
 .bot-main {
-  height: 100%;
-  width: 100%;
-  zoom: 140%;
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (min-width: 200px) and (max-width: 800px) {
-  .bot-main {
-    height: 100%;
-    width: 100%;
-    zoom: 150%;
-  }
+.bot-main > div {
+  height: 100%;
+  width: 100%;
+}
+
+.bot-main form {
+  width: 100vw;
+  height: 5vh;
+}
+
+.bot-main input {
+  width: 100% !important;
 }
 
 html body {
-  height: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+.bubble {
+  font-size: 24px !important;
+}
+
+* {
+  zoom: 0 !important;
+}
+/*# sourceMappingURL=index.css.map */
