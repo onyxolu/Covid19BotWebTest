@@ -1,6 +1,7 @@
 .bot-main {
   height: 100%;
   width: 100%;
+  zoom: 140%;
 }
 
 @media (min-width: 200px) and (max-width: 800px) {
