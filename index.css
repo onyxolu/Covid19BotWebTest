@@ -1,11 +1,12 @@
 .bot-main {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
+  zoom: 140%;
 }
 
 @media (min-width: 200px) and (max-width: 800px) {
   .bot-main {
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     zoom: 150%;
   }
