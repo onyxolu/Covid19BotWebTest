@@ -1,0 +1,17 @@
+.bot-main {
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+  .bot-main {
+    height: 100%;
+    width: 100%;
+    zoom: 150%;
+  }
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+}
