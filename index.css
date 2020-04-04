@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-@media (min-width: 200px) and (max-width: 600px) {
+@media (min-width: 200px) and (max-width: 800px) {
   .bot-main {
     height: 90vh;
     width: 100%;
